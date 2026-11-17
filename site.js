@@ -5,14 +5,14 @@
     navigation: "主导航", homeLabel: "Leqa 首页",
     navInside: "认识 Leqa", navPro: "Pro", navFAQ: "常见问题",
     heroEyebrow: "一个有温度的 iPad 邮件客户端",
-    heroTitle: "一个很轻<br>的邮箱。<br><em>生活，多一点。</em>",
+    heroTitle: "一个很轻的邮箱。<br><em>生活，多一点。</em>",
     heroDescription: "工作邮件，日常来信，都有自己的位置。把多个邮箱放在一起，好好处理每一封，然后留点时间给自己。",
     watch: "看一段 31 秒的介绍", explore: "慢慢认识 Leqa",
     releaseNote: "正在准备 App Store 上架 · 为 iPad 横屏设计",
     indie: "一个人做的邮件 App。<br>也放进了一点自己的小心思。",
     videoLabel: "Leqa 产品宣传视频，含中文画面介绍",
     videoFallback: "你的浏览器暂不支持播放视频。",
-    videoCaption: "31 秒 · 早期版本演示 · 中文",
+    videoCaption: "31 秒 · iPad 横屏 · 早期版本演示",
     videoError: "视频暂时无法播放，可以直接打开原录屏观看。",
     openVideo: "直接打开录屏 ↗",
     providerIntro: "不同邮箱，都有归处。", qq: "QQ 邮箱", providerNote: "一个首页，少一些来回切换。",
@@ -34,8 +34,8 @@
     aiBullet3: "接入你习惯的 AI 服务",
     appleAI: "Apple 智能",
     aiNote: "AI 写信属于 Leqa Pro 功能。第三方服务使用你自己的账号或 API Key，可能另行收费。Apple 功能取决于设备、语言与所在地区的支持情况。",
-    aiAlt: "Leqa 将随手写下的中文整理、润色为英文邮件的示例",
-    aiCaption: "把脑海里的意思，变成准备发出的邮件。",
+    aiAlt: "正常朝向的 iPad 横屏写信界面",
+    aiCaption: "App 实际写信界面，完整横屏展示。", aiArtwork: "查看 AI 写信图文示例 ↗",
     folderWork: "工作往来，妥善收好", folderImportant: "重要的那些事", archiveScribble: "给邮箱，也留点呼吸的空间。",
     archiveEyebrow: "04 / 给公司邮箱减一点负担",
     localTitle: "旧邮件。<br><em>也能有新归处。</em>",
@@ -89,8 +89,9 @@
     zh: {home: "Leqa 统一收件箱首页，展示演示邮件", compose: "Leqa 写信界面，包含发件人、收件人与富文本操作", settings: "Leqa 阅读设置，支持选择翻译语言与远程图片加载方式"}
   };
   function updateScreenshot() {
-    screen.src = `assets/app-${scene}-${language}.webp`;
+    screen.src = `assets/app-${scene}-${language}-landscape.webp`;
     screen.alt = screenDescriptions[language][scene];
+    document.getElementById("ai-screen").src = `assets/app-compose-${language}-landscape.webp`;
   }
   function applyLanguage() {
     document.documentElement.lang = language === "zh" ? "zh-Hans" : "en";
